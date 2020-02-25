@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "ad24107f-5b76-4caa-ad1f-02bd0fbffb50",
+		"name": "DNAC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "DNAC",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://10.48.90.165/dna/intent/api/v1/network-device/count?X-Auth-Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI1ZGE1Y2M2M2FlYTBlNTAwYzczZGUxNmYiLCJhdXRoU291cmNlIjoiaW50ZXJuYWwiLCJ0ZW5hbnROYW1lIjoiVE5UMCIsInJvbGVzIjpbIjVkYTVjYzYyYWVhMGU1MDBjNzNkZTE2ZSJdLCJ0ZW5hbnRJZCI6IjVkYTVjYzYxYWVhMGU1MDBjNzNkZTE2YyIsImV4cCI6MTU3NDY5NDYyOCwiaWF0IjoxNTc0NjkxMDI4LCJqdGkiOiI1ZjUxNWQ5Ny00MDBjLTQ2YzctYWI0MS05NDRhMDk4MmIyNjYiLCJ1c2VybmFtZSI6ImFkbWluIn0.jmtqJsR56rESX88nwdb0EezpNSCa_YtvdPGjWke4-A6DLwqG_o211uwbQg9lY06NMSllNCAdPbBWHt67dlgSQi2pvBBuK9kswPjk0bJSSOwBORheXjyg1zzDPiLcXj5GXnCaqGo0pBnfPU7AW6Vntdsb3b8rwE1rf9LwHN4vK0dYfQMlZOKVNhwZkDYyJhGdm741yAN9LvNyjDVNgq_q5CKZlwpoTZmYE8_VmFohrLTHMop5DaLL8l46tDZhftjNevh1SKq1-QcYNR9OMFTSwmdYyEZd7ASq4smmLJRogJXyxeeqjaVLNGDBlfsy9KWg5Eue_dmyEo-JAIKupEZ4eQ",
+					"protocol": "https",
+					"host": [
+						"10",
+						"48",
+						"90",
+						"165"
+					],
+					"path": [
+						"dna",
+						"intent",
+						"api",
+						"v1",
+						"network-device",
+						"count"
+					],
+					"query": [
+						{
+							"key": "X-Auth-Token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI1ZGE1Y2M2M2FlYTBlNTAwYzczZGUxNmYiLCJhdXRoU291cmNlIjoiaW50ZXJuYWwiLCJ0ZW5hbnROYW1lIjoiVE5UMCIsInJvbGVzIjpbIjVkYTVjYzYyYWVhMGU1MDBjNzNkZTE2ZSJdLCJ0ZW5hbnRJZCI6IjVkYTVjYzYxYWVhMGU1MDBjNzNkZTE2YyIsImV4cCI6MTU3NDY5NDYyOCwiaWF0IjoxNTc0NjkxMDI4LCJqdGkiOiI1ZjUxNWQ5Ny00MDBjLTQ2YzctYWI0MS05NDRhMDk4MmIyNjYiLCJ1c2VybmFtZSI6ImFkbWluIn0.jmtqJsR56rESX88nwdb0EezpNSCa_YtvdPGjWke4-A6DLwqG_o211uwbQg9lY06NMSllNCAdPbBWHt67dlgSQi2pvBBuK9kswPjk0bJSSOwBORheXjyg1zzDPiLcXj5GXnCaqGo0pBnfPU7AW6Vntdsb3b8rwE1rf9LwHN4vK0dYfQMlZOKVNhwZkDYyJhGdm741yAN9LvNyjDVNgq_q5CKZlwpoTZmYE8_VmFohrLTHMop5DaLL8l46tDZhftjNevh1SKq1-QcYNR9OMFTSwmdYyEZd7ASq4smmLJRogJXyxeeqjaVLNGDBlfsy9KWg5Eue_dmyEo-JAIKupEZ4eQ"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth Token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "cisco!123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://10.48.90.165/dna/system/api/v1/auth/token?Content-Type=application/json",
+					"protocol": "https",
+					"host": [
+						"10",
+						"48",
+						"90",
+						"165"
+					],
+					"path": [
+						"dna",
+						"system",
+						"api",
+						"v1",
+						"auth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					]
+				},
+				"description": "https://10.48.90.165/dna/system/api/v1/auth/token?Content-Type=application/json"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
