@@ -1,6 +1,6 @@
 [![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/LeCoderCat/dna-center-api)
 
-# dna-center-api
+# get-started-dna-center-api
 Example code on how to perform API calls to Cisco DNA Center using Python 3 and Postman.
 The files included on this repository contain:
 
