@@ -44,7 +44,7 @@ Or to directly test API calls on DNA Center, click [here](https://developer.cisc
 
 ### How to run the script
 
-Here you can find examples of the output of the script running. After running insert the needed data in order to first retrieve the JWT and then to perform API call. Every input stream is followed by text that will have a suggestion on what field is required and an example of what can be input in the field. 
+Here you can find examples of the output of the script running. After running, insert the needed data in order to first retrieve the JWT and then to perform API call. Every input stream is followed by text that will have a suggestion on what field is required and an example of what can be input in the field. The script is able run several API calls until interrupted.
 
 API_DNAC.py
 ```bash
