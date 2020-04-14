@@ -70,7 +70,7 @@ In case the DNA Center PKI is not natively recognized by the station where Postm
 
 ![Postman settings](/img/disable_cert_ver.png)
 
-After that, do an API call to generate the JWT (token) to authenticate (using GUI credentials) and perform API calls:
+After that, do an API call to generate the JWT (token) to authenticate (using GUI credentials, on the Authorization tab next to Params) and perform API calls:
 
 ![Postman Token Gen](/img/token1.png)
 
