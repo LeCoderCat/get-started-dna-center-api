@@ -16,7 +16,7 @@ The Postman collection requires Postman application to be installed on the compu
 ### Setting Up to Run the script
 Clone and Prep the Environment
     Clone the code repo
-    git clone https://github.com/LeCoderCat/dna-center-api.git
+    git clone https://github.com/LeCoderCat/get-started-dna-center-api.git
     cd ssh-cisco-devices
    
 ### Setup Python Virtual Environment
@@ -33,9 +33,13 @@ Clone and Prep the Environment
     
 ### Infrastructure Resources needed to run the script
     
-In order to have access to Cisco DNA Center platform, you can use reservation-based sandboxes available at Cisco's DEVNET site. These sandboxes are private, preconfigured labs with all resources dedicated to you for the duration of the reservation. You have the ability to install your own application and share the lab with other users.
+In order to have access to Cisco DNA Center platform, you can use one of sandboxes available at Cisco's DEVNET site. These sandboxes are preconfigured labs with all resources dedicated to you for the duration of the reservation. You have the ability to install your own application and share the lab with other users.
 
-To access Cisco DNA Center sandboxes, click [here](https://developer.cisco.com/docs/dna-center/#!sandboxes/cisco-dna-center-sandboxes).
+To start using the content of this repo on Cisco DNA Center sandboxes, click [here](https://sandboxdnac.cisco.com/).
+User: devnetuser
+Password: Cisco123!
+
+Or to directly test API calls on DNA Center, click [here](https://developer.cisco.com/docs/dna-center/api/1-3-3-x/#!intent-api-v1-3-3-x)
 
 ### How to run the script
 
