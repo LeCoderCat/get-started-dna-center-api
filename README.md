@@ -67,5 +67,14 @@ MAC:ssh_scripts user$
 Postman collection
 
 In case the DNA Center PKI is not natively recognized by the station where Postman is installed, please disable the certificate verification on Postman's settings:
+
 ![Postman settings](/img/disable_cert_ver.png)
-Format: ![Alt Text](url)
+
+After that, do an API call to generate the JWT (token) to authenticate (using GUI credentials) and perform API calls:
+
+![Postman Token Gen](/img/token1.png)
+
+Use the generated token to perform API calls:
+
+![Postman API call](/img/token2.png)
+
