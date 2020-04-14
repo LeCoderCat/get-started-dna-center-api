@@ -1,4 +1,4 @@
-import requests, json, getpass, urllib3
+import requests, json, getpass, urllib3, ipaddress, sys
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 #first function to generate JWT (necessary token to perform API calls)
@@ -46,12 +46,38 @@ def getSiteTopology(dnac_IP, APIcall, my_token):
     elif req.status_code == 401:
         print("Unauthorized.")
 
-set_dnac_IP = input("Enter the IP of the DNAC (10.48.90.165): ")
-set_username = input("Enter the username of the DNAC GUI (admin): ")
-set_password = getpass.getpass("Enter the DNAC GUI password (cisco!123): ")
-result = postAuthToken(set_dnac_IP, set_username, set_password)
+#variable input/verification and run functions
+while True:
 
-set_DNACIP = result[0]
-set_token = result[1]
-set_APIcall = input("Enter the API [GET]URL (dna/intent/api/v1/topology/site-topology): ")
-result2 = getSiteTopology(set_DNACIP, set_APIcall, set_token)
+    try:
+        set_dnac_IP = input("Enter the IP of the DNAC (10.48.90.165): ")
+        ipaddress.ip_address(set_dnac_IP)
+    except ValueError:
+        print('Invalid input, try a valid IPv4 address format')
+        continue
+
+    set_username = input("Enter the username of the DNAC GUI (admin): ")
+    set_password = getpass.getpass("Enter the DNAC GUI password (cisco!123): ")
+
+    try:
+        result = postAuthToken(set_dnac_IP, set_username, set_password)
+    except:
+        print('Token not generated, try a valid username/password')
+        continue
+    
+    set_DNACIP = result[0]
+    set_token = result[1]
+    
+    while True:
+
+        try:
+            set_APIcall = input("Enter the API [GET]URL (dna/intent/api/v1/topology/site-topology): ")
+            result2 = getSiteTopology(set_DNACIP, set_APIcall, set_token)
+        
+        except KeyboardInterrupt:
+            sys.exit()
+        
+        except:
+            print('Invalid API call, try the URL in the format dna/intent/api/.... ')
+            continue
+            
