@@ -1,8 +1,10 @@
 # dna-center-api
 Example code on how to perform API calls to Cisco DNA Center using Python 3 and Postman.
 The files included on this repository contain:
-1. Python 3 example code on how to generate the necessary JWT and subsequently do API calls to Cisco DNA Center. This would be the base code for any Python 3 script that would integrate with DNA Center.
-2. Postman collection to interact with DNA Center. One file for the JWT generation and examples of API calls.
+
+*Python 3 example code on how to generate the necessary JWT and subsequently do API calls to Cisco DNA Center. This would be the base code for any Python 3 script that would integrate with DNA Center.
+
+*Postman collection to interact with DNA Center. One file for the JWT generation and examples of API calls.
 
 ## Instructions
 The script should be run on the terminal on a device that has python3 and the required python packages installed.
@@ -62,21 +64,8 @@ Response is:
 MAC:ssh_scripts user$ 
 ```
 
-PRIME_SSH.py
-```bash
-MAC:ssh_scripts user$ python3 PRIME_SSH.py 
-Logged in Prime. . .
+Postman collection
 
-show clock
-
-exit
-
-WARNING: Unsuccessful login attempts :
-
-admin    ssh:notty    Thu Feb 20 22:25 - 22:25  (00:00)     192.168.0.1
---------------------------------------
-css-dna-pi/admin# show clock
-Thu Feb 27 12:52:54 CET 2020
-css-dna-pi/admin# exit
-MAC:ssh_scripts user$
-```
+In case the DNA Center PKI is not natively recognized by the station where Postman is installed, please disable the certificate verification on Postman's settings:
+![Postman settings](/img/disable_cert_ver.png)
+Format: ![Alt Text](url)
