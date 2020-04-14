@@ -1,10 +1,13 @@
 import requests, json, getpass, urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
+#first function to generate JWT (necessary token to perform API calls)
 def postAuthToken(dnac_IP, dnac_username , dnac_password):
 
+    #To generate the token we need DNA Center GUI username and password
     data = dnac_username + ":" + dnac_password
 
+    #DNA Center API call to generate the token
     URL = "https://" + dnac_IP + "/dna/system/api/v1/auth/token"
 
     header = {}
@@ -18,6 +21,7 @@ def postAuthToken(dnac_IP, dnac_username , dnac_password):
 
     return [dnac_IP, token_content]
 
+#Function to perform API call
 def getSiteTopology(dnac_IP, APIcall, my_token):
 
     URL = "https://" + dnac_IP + "/" + APIcall
@@ -29,6 +33,7 @@ def getSiteTopology(dnac_IP, APIcall, my_token):
 
     cont = req.content
 
+    #The reply will be on JSON format, therefore we are parsing the JSON content
     parsed_cont = json.loads(cont)
     json_cont = json.dumps(parsed_cont, indent=4, sort_keys=True)
 
