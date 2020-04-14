@@ -37,27 +37,28 @@ To access Cisco DNA Center sandboxes, click [here](https://developer.cisco.com/d
 
 Here you can find examples of the output of the script running. After running insert the needed data in order to first retrieve the JWT and then to perform API call. Every input stream is followed by text that will have a suggestion on what field is required and an example of what can be input in the field. 
 
-DNAC_SSH.py (same way to run DNAC.py)
+API_DNAC.py
 ```bash
-MAC:ssh_scripts user$ python3 DNAC_SSH.py 
-Logged in DNAC. . .
-
-logout 
-NAMESPACE                  NAME                                                     READY     STATUS      RESTARTS   AGE       IP              NODE            NOMINATED NODE
-assurance-backend          collector-cli-5fc77585d8-79ttt                           1/1       Running     1          40d       172.31.5.6      192.168.21.18   <none>
-assurance-backend          collector-iosxe-db-5b6856d9f6-n4bxd                      1/1       Running     1          40d       172.31.5.28     192.168.21.18   <none>
-assurance-backend          grpc-collector-6d9f8776c9-mt4v6                          1/1       Running     1          40d       192.168.21.18   192.168.21.18   <none>
-assurance-backend          nsa-webapp-5c955f6dd-g7wjx                               1/1       Running     1          40d       172.31.4.244    192.168.21.18   <none>
-assurance-backend          serviceability-656f45df7b-kf56l                          1/1       Running     1          40d       172.31.5.45     192.168.21.18   <none>
-assurance-backend          skype-collector-7d6d588cc-6q7jw                          1/1       Running     1          40d       172.31.4.207    192.168.21.18   <none>
-assurance-backend          wirelesscollector-bf99f5f99-jhjjm                        1/1       Running     1          40d       172.31.4.247    192.168.21.18   <none>
-dnacaap                    daas-runtime-85858c9bdf-jk6tn                            1/1       Running     1          40d       172.31.4.240    192.168.21.18   <none>
-<...>
-dnacaap                    dna-event-runtime-6d749f8b9d-ff497                       1/1       Running     1          40d       172.31.4.194    192.168.21.18   <none>
-ndp                        redis-0                                                  2/2       Running     3          40d       172.31.4.249    192.168.21.18   <none>
-ndp                        schemaregistry-5c948f8f8b-q5g5w                          1/1       Running     1          40d       172.31.4.250    192.168.21.18   <none>
-ndp                        writestore-6fcd4798c8-h6rlf                              1/1       Running     4          40d       172.31.4.205    192.168.21.18   <none>
-sensor-assurance-backend   sensor-assurance-backend-66cbffd66d-rmq7t                1/1       Running     1          40d       172.31.4.195    192.168.21.18   <none>
+MAC:ssh_scripts user$ python3 API_DNAC.py
+Enter the IP of the DNAC (10.48.90.165): 10.48.90.165
+Enter the username of the DNAC GUI (admin): admin	
+Enter the DNAC GUI password (cisco!123): 
+Enter the API [GET]URL (dna/intent/api/v1/topology/site-topology): dna/intent/api/v1/site
+Status Code is: 200
+Success!
+Response is:
+ {
+    "response": [
+        {
+            "additionalInfo": [],
+            "id": "c06f98d8-e8f1-4da5-9666-8610d38b1e48",
+            "instanceTenantId": "SYS0",
+            "name": "Global",
+            "siteHierarchy": "c06f98d8-e8f1-4da5-9666-8610d38b1e48",
+            "siteNameHierarchy": "Global"
+        }
+    ]
+}
 MAC:ssh_scripts user$ 
 ```
 
