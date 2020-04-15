@@ -4,9 +4,9 @@
 Example code on how to perform API calls to Cisco DNA Center using Python 3 and Postman.
 The files included on this repository contain:
 
-*Python 3 example code on how to generate the necessary JWT and subsequently do API calls to Cisco DNA Center. This would be the base code for any Python 3 script that would integrate with DNA Center.
+* Python 3 example code on how to generate the necessary JWT and subsequently do API calls to Cisco DNA Center. This would be the base code for any Python 3 script that would integrate with DNA Center.
 
-*Postman collection to interact with DNA Center. One file for the JWT generation and examples of API calls.
+* Postman collection to interact with DNA Center. One file for the JWT generation and examples of API calls.
 
 ## Instructions
 The script should be run on the terminal on a device that has python3 and the required python packages installed.
