@@ -6,7 +6,7 @@ The files included on this repository contain:
 
 * Python 3 example code on how to generate the necessary JWT and subsequently do API calls to Cisco DNA Center. This would be the base code for any Python 3 script that would integrate with DNA Center.
 
-* Postman collection to interact with DNA Center. One file for the JWT generation and examples of API calls.
+* Postman collection to interact with DNA Center (ready to use with sandboxdnac.cisco.com!). One file for the JWT generation and examples of API calls.
 
 ## Instructions
 The script should be run on the terminal on a device that has python3 and the required python packages installed.
@@ -73,7 +73,7 @@ MAC:ssh_scripts user$
 
 Postman collection
 
-In case the DNA Center PKI is not natively recognized by the station where Postman is installed, please disable the certificate verification on Postman's settings:
+This collection by default queries sandboxdnac.cisco.com. In that case, DNA Center PKI is not natively recognized by the station where Postman is installed. To be able to interacti wht DNA Center API, please disable the certificate verification on Postman's settings:
 
 ![Postman settings](/img/disable_cert_ver.png)
 
