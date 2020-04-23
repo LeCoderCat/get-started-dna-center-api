@@ -6,59 +6,6 @@
 	},
 	"item": [
 		{
-			"name": "DNAC",
-			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": [
-						{
-							"key": "username",
-							"value": "",
-							"type": "string"
-						},
-						{
-							"key": "password",
-							"value": "",
-							"type": "string"
-						}
-					]
-				},
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "https://10.48.90.165/dna/intent/api/v1/network-device/count?X-Auth-Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI1ZGE1Y2M2M2FlYTBlNTAwYzczZGUxNmYiLCJhdXRoU291cmNlIjoiaW50ZXJuYWwiLCJ0ZW5hbnROYW1lIjoiVE5UMCIsInJvbGVzIjpbIjVkYTVjYzYyYWVhMGU1MDBjNzNkZTE2ZSJdLCJ0ZW5hbnRJZCI6IjVkYTVjYzYxYWVhMGU1MDBjNzNkZTE2YyIsImV4cCI6MTU3NDY5NDYyOCwiaWF0IjoxNTc0NjkxMDI4LCJqdGkiOiI1ZjUxNWQ5Ny00MDBjLTQ2YzctYWI0MS05NDRhMDk4MmIyNjYiLCJ1c2VybmFtZSI6ImFkbWluIn0.jmtqJsR56rESX88nwdb0EezpNSCa_YtvdPGjWke4-A6DLwqG_o211uwbQg9lY06NMSllNCAdPbBWHt67dlgSQi2pvBBuK9kswPjk0bJSSOwBORheXjyg1zzDPiLcXj5GXnCaqGo0pBnfPU7AW6Vntdsb3b8rwE1rf9LwHN4vK0dYfQMlZOKVNhwZkDYyJhGdm741yAN9LvNyjDVNgq_q5CKZlwpoTZmYE8_VmFohrLTHMop5DaLL8l46tDZhftjNevh1SKq1-QcYNR9OMFTSwmdYyEZd7ASq4smmLJRogJXyxeeqjaVLNGDBlfsy9KWg5Eue_dmyEo-JAIKupEZ4eQ",
-					"protocol": "https",
-					"host": [
-						"10",
-						"48",
-						"90",
-						"165"
-					],
-					"path": [
-						"dna",
-						"intent",
-						"api",
-						"v1",
-						"network-device",
-						"count"
-					],
-					"query": [
-						{
-							"key": "X-Auth-Token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI1ZGE1Y2M2M2FlYTBlNTAwYzczZGUxNmYiLCJhdXRoU291cmNlIjoiaW50ZXJuYWwiLCJ0ZW5hbnROYW1lIjoiVE5UMCIsInJvbGVzIjpbIjVkYTVjYzYyYWVhMGU1MDBjNzNkZTE2ZSJdLCJ0ZW5hbnRJZCI6IjVkYTVjYzYxYWVhMGU1MDBjNzNkZTE2YyIsImV4cCI6MTU3NDY5NDYyOCwiaWF0IjoxNTc0NjkxMDI4LCJqdGkiOiI1ZjUxNWQ5Ny00MDBjLTQ2YzctYWI0MS05NDRhMDk4MmIyNjYiLCJ1c2VybmFtZSI6ImFkbWluIn0.jmtqJsR56rESX88nwdb0EezpNSCa_YtvdPGjWke4-A6DLwqG_o211uwbQg9lY06NMSllNCAdPbBWHt67dlgSQi2pvBBuK9kswPjk0bJSSOwBORheXjyg1zzDPiLcXj5GXnCaqGo0pBnfPU7AW6Vntdsb3b8rwE1rf9LwHN4vK0dYfQMlZOKVNhwZkDYyJhGdm741yAN9LvNyjDVNgq_q5CKZlwpoTZmYE8_VmFohrLTHMop5DaLL8l46tDZhftjNevh1SKq1-QcYNR9OMFTSwmdYyEZd7ASq4smmLJRogJXyxeeqjaVLNGDBlfsy9KWg5Eue_dmyEo-JAIKupEZ4eQ"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "Auth Token",
 			"request": {
 				"auth": {
@@ -66,12 +13,12 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "cisco!123",
+							"value": "D3v93T@wK!",
 							"type": "string"
 						},
 						{
 							"key": "username",
-							"value": "admin",
+							"value": "dnacdev",
 							"type": "string"
 						}
 					]
@@ -79,13 +26,12 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "https://10.48.90.165/dna/system/api/v1/auth/token?Content-Type=application/json",
+					"raw": "https://sandboxdnac.cisco.com/dna/system/api/v1/auth/token",
 					"protocol": "https",
 					"host": [
-						"10",
-						"48",
-						"90",
-						"165"
+						"sandboxdnac",
+						"cisco",
+						"com"
 					],
 					"path": [
 						"dna",
@@ -94,15 +40,134 @@
 						"v1",
 						"auth",
 						"token"
-					],
-					"query": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						}
 					]
 				},
 				"description": "https://10.48.90.165/dna/system/api/v1/auth/token?Content-Type=application/json"
+			},
+			"response": []
+		},
+		{
+			"name": "network-devices",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTY2ZDE0NTdjZDQ3ZTAwNGM2N2RkMGQiLCJhdXRoU291cmNlIjoiaW50ZXJuYWwiLCJ0ZW5hbnROYW1lIjoiVE5UMCIsInJvbGVzIjpbIjVkYzQ0NGQ0MTQ4NWM1MDA0YzBmYjIwZCJdLCJ0ZW5hbnRJZCI6IjVkYzQ0NGQzMTQ4NWM1MDA0YzBmYjIwYiIsImV4cCI6MTU4NzQ3NzY2MSwidXNlcm5hbWUiOiJkbmFjZGV2In0.JW3ZVRPf0m7FNwEQCVfbNsyHHmLY_QeGNgRjnWyuMhY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://sandboxdnac.cisco.com/api/v1/network-device",
+					"protocol": "https",
+					"host": [
+						"sandboxdnac",
+						"cisco",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"network-device"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "flow-analysis Initiate Task",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTY2ZDE0NTdjZDQ3ZTAwNGM2N2RkMGQiLCJhdXRoU291cmNlIjoiaW50ZXJuYWwiLCJ0ZW5hbnROYW1lIjoiVE5UMCIsInJvbGVzIjpbIjVkYzQ0NGQ0MTQ4NWM1MDA0YzBmYjIwZCJdLCJ0ZW5hbnRJZCI6IjVkYzQ0NGQzMTQ4NWM1MDA0YzBmYjIwYiIsImV4cCI6MTU4NzQ3NzY2MSwidXNlcm5hbWUiOiJkbmFjZGV2In0.JW3ZVRPf0m7FNwEQCVfbNsyHHmLY_QeGNgRjnWyuMhY",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"sourceIP\" : \"10.10.22.253\", \"destIP\" : \"10.10.22.73\"}"
+				},
+				"url": {
+					"raw": "https://sandboxdnac.cisco.com/dna/intent/api/v1/flow-analysis",
+					"protocol": "https",
+					"host": [
+						"sandboxdnac",
+						"cisco",
+						"com"
+					],
+					"path": [
+						"dna",
+						"intent",
+						"api",
+						"v1",
+						"flow-analysis"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "flow-analysis Task Status",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTY2ZDE0NTdjZDQ3ZTAwNGM2N2RkMGQiLCJhdXRoU291cmNlIjoiaW50ZXJuYWwiLCJ0ZW5hbnROYW1lIjoiVE5UMCIsInJvbGVzIjpbIjVkYzQ0NGQ0MTQ4NWM1MDA0YzBmYjIwZCJdLCJ0ZW5hbnRJZCI6IjVkYzQ0NGQzMTQ4NWM1MDA0YzBmYjIwYiIsImV4cCI6MTU4NzQ2NTAzMCwidXNlcm5hbWUiOiJkbmFjZGV2In0.cDFpvBzHHW3n_Bv0FBBSVZ5pwYmO3aSOth-Wo3puvtA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://sandboxdnac.cisco.com/api/v1/task/5d32da5f-0d69-4e28-9860-4895fbb9b6cb",
+					"protocol": "https",
+					"host": [
+						"sandboxdnac",
+						"cisco",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"task",
+						"5d32da5f-0d69-4e28-9860-4895fbb9b6cb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "flow-analysis Result",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTY2ZDE0NTdjZDQ3ZTAwNGM2N2RkMGQiLCJhdXRoU291cmNlIjoiaW50ZXJuYWwiLCJ0ZW5hbnROYW1lIjoiVE5UMCIsInJvbGVzIjpbIjVkYzQ0NGQ0MTQ4NWM1MDA0YzBmYjIwZCJdLCJ0ZW5hbnRJZCI6IjVkYzQ0NGQzMTQ4NWM1MDA0YzBmYjIwYiIsImV4cCI6MTU4NzQ2NTAzMCwidXNlcm5hbWUiOiJkbmFjZGV2In0.cDFpvBzHHW3n_Bv0FBBSVZ5pwYmO3aSOth-Wo3puvtA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://sandboxdnac.cisco.com/api/v1/flow-analysis/825b7d48-2580-4a9b-b969-02f84f68e2ae",
+					"protocol": "https",
+					"host": [
+						"sandboxdnac",
+						"cisco",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"flow-analysis",
+						"825b7d48-2580-4a9b-b969-02f84f68e2ae"
+					]
+				}
 			},
 			"response": []
 		}
