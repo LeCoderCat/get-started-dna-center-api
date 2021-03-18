@@ -17,7 +17,7 @@ The Postman collection requires Postman application to be installed on the compu
 Clone and Prep the Environment
     Clone the code repo
     git clone https://github.com/LeCoderCat/get-started-dna-center-api.git
-    cd ssh-cisco-devices
+    cd get-started-dna-center-api
    
 ### Setup Python Virtual Environment
     1. MacOS or Linux
